@@ -27,10 +27,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">소개</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">프로젝트</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">상세내용</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">팀소개</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">개요</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">프로젝트 상세</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">구축 프로세스</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">팀 소개</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">연락처</a></li>
                     </ul>
                 </div>
@@ -39,8 +39,8 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">싹닥터(SAC-Doctor)에 오신 것을 환영합니다.</div>
-                <div class="masthead-heading text-uppercase">최정은 엄준호 서인수 조민지</div>
+                <div class="masthead-heading">싹닥터(SAC-Doctor)</div>
+                <div class="masthead-subheading">서인수/엄준호/조민지/최정은</div>
                 <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">궁금하면 클릭</a>
             </div>
         </header>
@@ -48,33 +48,33 @@
         <section class="page-section" id="services">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">프로젝트</h2>
-                    <h3 class="section-subheading text-muted">4조 프로젝트 개요는 하기와 같습니다.</h3>
+                    <h2 class="section-heading text-uppercase">개요</h2>
+                    <h3 class="section-subheading text-muted">프로젝트 개요는 하기와 같습니다.</h3>
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-solid fa-wifi fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">네트워크</h4>
-                        <p class="text-muted">Network</p>
+                        <h4 class="my-3">라우터</h4>
+                        <p class="text-muted">Router</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-solid fa-server fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">웹서버</h4>
-                        <p class="text-muted">Web</p>
+                        <h4 class="my-3">웹서버(VM)</h4>
+                        <p class="text-muted">WebServer(VM)</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-solid fa-database fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">데이터베이스</h4>
-                        <p class="text-muted">DB</p>
+                        <p class="text-muted">Database</p>
                     </div>
                 </div>
             </div>
@@ -83,8 +83,8 @@
         <section class="page-section bg-light" id="portfolio">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">포트폴리오</h2>
-                    <h3 class="section-subheading text-muted">포트폴리오 상세 내용은 하기와 같습니다. </h3>
+                    <h2 class="section-heading text-uppercase">프로젝트 상세</h2>
+                    <h3 class="section-subheading text-muted">상세 내용은 이미지를 클릭해주세요. </h3>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 mb-4">
@@ -96,7 +96,7 @@
                                 <img class="img-fluid" src="assets/img/portfolio/01-thumbnail.jpg" alt="" />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">1번</div>
+                                <div class="portfolio-caption-heading">물리 스위치 연결</div>
                                 <div class="portfolio-caption-subheading text-muted">First</div>
                             </div>
                         </div>
@@ -110,7 +110,7 @@
                                 <img class="img-fluid" src="assets/img/portfolio/02-thumbnail.jpg" alt="" />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">2번</div>
+                                <div class="portfolio-caption-heading">라우터로 Private IP 할당</div>
                                 <div class="portfolio-caption-subheading text-muted">Second</div>
                             </div>
                         </div>
@@ -178,59 +178,54 @@
         <section class="page-section" id="about">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">타임라인</h2>
-                    <h3 class="section-subheading text-muted">타임라인별 한 일</h3>
+                    <h2 class="section-heading text-uppercase">구현 프로세스</h2>
+                    <h3 class="section-subheading text-muted">(subheading)</h3>
                 </div>
                 <ul class="timeline">
                     <li>
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>2009-2011</h4>
-                                <h4 class="subheading">가나다</h4>
+                                <h4>Router 구축</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">내용1</p></div>
+                            <div class="timeline-body"><p class="text-muted">Router을 통한 NAT,<br>DHCP을 통한 IP 할당</p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>March 2011</h4>
-                                <h4 class="subheading">마바사</h4>
+                                <h4>ESXi 구축 및 VM 설치</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">내용2</p></div>
+                            <div class="timeline-body"><p class="text-muted">ESXi구축을 통한 백업 파일 보관,<br>VM 설치를 통한 각 서버 구축</p></div>
                         </div>
                     </li>
                     <li>
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>December 2012</h4>
-                                <h4 class="subheading">아자차</h4>
+                                <h4>WebServer / DNS DB 구축</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">내용3</p></div>
+                            <div class="timeline-body"><p class="text-muted">VM 상에 WebServer 구축 및 홈페이지 제작,<br>DNS DB 구축을 통한 홈페이지 도메인 관리</p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>July 2014</h4>
-                                <h4 class="subheading">카타파</h4>
+                                <h4>SMB / NFS / FTP / Webshare 구축</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">내용4</p></div>
+                            <div class="timeline-body"><p class="text-muted">내부 파일 공유 시스템을 통한 파일 공유</p></div>
                         </div>
                     </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image">
-                            <h4>
-                                프로젝트
-                                <br />
-                                완성
-                                <br />
-                                아자!
-                            </h4>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>SLB / NMS 구축</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">로드밸런싱을 통한 홈페이지 가용성 확보,<br>NMS을 활용한 네트워크 모니터링</div>
+                        </div>
                         </div>
                     </li>
                 </ul>
@@ -248,7 +243,7 @@
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="assets/img/team/SIS.png" alt="" />
                             <h4>서인수</h4>
-                            <p class="text-muted">조장</p>
+                            <p class="text-muted">조장/DB</p>
                             <a class="btn btn-dark btn-social mx-2" href="mailto:ipxid90@outlook.com"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
@@ -272,7 +267,7 @@
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="assets/img/team/CJE.png" alt="" />
                             <h4>최정은</h4>
-                            <p class="text-muted">네트워크 담당</p>
+                            <p class="text-muted">네트워크</p>
                             <a class="btn btn-dark btn-social mx-2" href="mailto:jungeun5.choi@gmail.com"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
