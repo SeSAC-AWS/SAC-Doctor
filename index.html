@@ -175,7 +175,7 @@
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">ESXi 상에서<br>VM 및 iSCSI 구축</div>
-                                <div class="portfolio-caption-subheading text-muted">물리 스위치로 연결된 기기들은 ESXi 위에서 VM 생성 및 접근이 가능</div>
+                                <div class="portfolio-caption-subheading text-muted">물리 스위치 랜카드를 연결한 기기들은 ESXi 위에서 VM 생성 및 접근이 가능</div>
                             </div>
                         </div>
                     </div>
@@ -387,9 +387,21 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">ESXi 상에서 VM 및 iSCSI 구축</h2>
-                                    <p class="item-intro text-muted">물리 스위치로 연결된 기기들은 ESXi 위에서 VM 생성 및 접근이 가능</p>
-                                    <p class="item-content">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <h2 class="">ESXi 상에서 VM 및 iSCSI 구축</h2>
+                                    <p class="item-intro text-muted">물리 스위치 랜카드를 연결한 기기들은 ESXi 위에서 VM 생성 및 접근이 가능</p>
+                                    <p class="item-content">
+                                        모든 팀원의 PC와 ESXi는 물리 스위치 랜카드를 연결하였고, 가상 라우터를 통해서 상호 접근이 가능한 Private IP가 분배되었습니다.
+                                        이는 ESXi는 담당 팀원의 PC에서 설치되었지만, <b>담당 팀원을 제외한 다른 팀원들의 PC에서도 ESXi GUI에 접근이 가능</b>해졌음을 의미합니다.
+                                        모든 팀원은 ESXi 상에 가상 머신(VM)을 생성할 수 있고, ESXi 상에 생성된 임의의 VM을 실행하고 종료할 수 있습니다.
+                                    </p>
+                                    <p class="item-content">
+                                        <!-- iSCSI 개념 설명 간략하게 설명 후 ->  논리 유닛 생성 및 마운트 -->
+                                    </p>
+                                    <p style="text-align: left;">(1: EXSi GUI에서 접속 중인 사진)</p>
+                                    <p class="item-content">
+                                        
+                                    </p>
+                                    <p style="text-align: left;">(2: iSCSI 관련 사진)</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/03-full.png" alt="" />
                                     <ul class="list-inline">
                                         <li><b>담당자:</b> 서인수(iSCSI/VM), 엄준호(VM), 조민지(VM)</li>
@@ -518,7 +530,7 @@
                                         </ul>
                                     </details>
                                     <p class="item-content">
-                                        저희 팀은 모니터링 시스템으로 상대적으로 인터페이스가 단순하고, 원하는 정보의 그래프만 배치하여 확인할 수 있는 <b>Cacti</b>를 채택했습니다.
+                                        저희 팀은 모니터링 도구로 상대적으로 인터페이스가 단순하고, 원하는 정보의 그래프만 배치하여 확인할 수 있는 <b>Cacti</b>를 채택했습니다.
                                         아래는 Windows 서버를 모니터링 중인 사진입니다.
                                     </p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/06-full.png" alt="" />
@@ -548,7 +560,19 @@
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">로드밸런싱</h2>
                                     <p class="item-intro text-muted">가상 라우터에서 HAProxy를 통해 로드밸런싱을 진행</p>
-                                    <p class="item-content">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p class="item-content">
+                                        <!-- 1. 개요 -> 2. 과정 -> 3. 결과 -->
+                                        팀원이 디자인한 웹 페이지를 배포하려고 합니다. 하지만, 한 개의 서버만을 사용하여 배포하면, 서버가 다운되면 복구 시까지 웹 페이지를 서비스 할 수 없게 됩니다.
+                                        그래서 여러 개의 서버에 웹 페이지를 설치하고, 로드밸런싱을 통해 서비스의 고 가용성을 보장해주려고 합니다.
+                                    </p>
+                                    <p class="item-content">
+                                        로드밸런싱을 위해 HAProxy를 사용하려고 합니다. HAProxy는 TCP(L4)와 HTTP(L7) 프로토콜을 모두 지원하는 오픈소스 솔루션으로, 로드밸런싱과 프록시 기능을 제공합니다.
+                                        저희는 동일한 도메인, 포트에서 웹 페이지가 실행되도록 하기 위해, L7에서 로드밸런싱되도록 설정했고, 스케줄링 방식은 라운드 로빈을 채택했습니다.                                        
+                                    </p>
+                                    <p class="item-content">
+                                        아래 사진처럼 로드밸런싱이 잘 되는 것을 확인할 수 있었습니다.
+                                        <br>(확인을 위해 임의로 페이지에 숫자를 표기했습니다.)
+                                    </p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/07-full.gif" alt="" />
                                     <ul class="list-inline">
                                         <li><b>담당자:</b> 최정은(로드밸런싱), 조민지(식권대장 웹 페이지)</li>
