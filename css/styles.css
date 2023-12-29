@@ -509,6 +509,7 @@ mark,
 }
 
 code {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 87.5%;
   color: #e83e8c;
   word-wrap: break-word;
@@ -9994,6 +9995,9 @@ p {
 .page-section {
   padding: 6rem 0;
 }
+.page-sub-section {
+  padding: 3rem 0;
+}
 .page-section h2.section-heading {
   font-size: 2.5rem;
   margin-top: 0;
@@ -10242,6 +10246,11 @@ header.masthead .masthead-heading {
 .portfolio-modal .modal-content ul.list-inline {
   margin-bottom: 2rem;
 }
+.portfolio-modal .modal-content ul.item-content {  
+  font-size: 1.2rem;
+  text-align: left;
+  font-family: "KoPubWorldDotum", "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
 .portfolio-modal .modal-content img {
   margin-bottom: 2rem;
 }
@@ -10256,6 +10265,12 @@ header.masthead .masthead-heading {
 }
 .portfolio-modal .close-modal:hover {
   opacity: 0.3;
+}
+.portfolio-modal .modal-content summary.item-content {  
+  font-size: 1.2rem;
+  text-align: justify;
+  font-family: "KoPubWorldDotum", "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  padding-bottom: 2rem;
 }
 
 .timeline {

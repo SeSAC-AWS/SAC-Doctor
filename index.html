@@ -48,7 +48,7 @@
             </div>
         </header>
         <!-- Services-->
-        <section class="page-section" id="summary">
+        <section class="page-section bg-light" id="summary">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">개요</h2>
@@ -117,13 +117,15 @@
                         <p class="text-muted">MobaXterm</p>
                     </div>
                 </div>
-                <div class="text-center">
-                    <h3 class="section-midleheading text-dark">아키텍처</h3>
-                </div>
-                <div class="row text-center">
-                    <div class="col-md-12">
-                        <a href="#!"><img class="img-fluid d-block mx-auto" src="assets/img/summary/01-architect.png" alt="" /></a>
-                    </div>
+            </div>
+        </section>
+        <section class="page-sub-section">
+            <div class="text-center">
+                <h3 class="section-midleheading text-dark" style="margin-bottom: 50px;">아키텍처</h3>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <a href="#!"><img class="img-fluid d-block mx-auto" src="assets/img/summary/01-architect.png" alt="" /></a>
                 </div>
             </div>
         </section>
@@ -359,9 +361,10 @@
                                     <p class="item-intro text-muted">vRouter에서 DHCP을 통해 각 기기에 Private IP 할당</p>
                                     <p class="item-content">팀 내 망 구축을 위해 팀원들의 PC와 ESXi에 IP를 분배해야합니다. vRouter가 <b>물리 스위치로부터 받는 IP를 static으로 고정</b>하고, <b>랜카드에 대한 네트워크 설정을 마친 후,</b> <b>vRouter에서 DHCP 데몬을 설치 및 실행</b>하였습니다. </p>
                                     <p class="item-content">물리 스위치 랜카드에 대한 네트워크 설정은 Private으로 해두어서 팀원들의 PC와 ESXi에는 Private IP가 할당되었습니다. ESXi는 물리 스위치의 랜카드를 연결했기 때문에 외부에서는 접근할 수 없고, 물리 스위치로 연결된 팀원의 PC만 접근할 수 있게 되었습니다.</p>
+                                    <p>(dhcp 관련 이미지 추가)</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/02-full.png" alt="" />
                                     <ul class="list-inline">
-                                        <li>담당자: 최정은</li>
+                                        <li><b>담당자:</b> 최정은</li>
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
@@ -389,7 +392,7 @@
                                     <p class="item-content">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/03-full.png" alt="" />
                                     <ul class="list-inline">
-                                        <li>담당자: 서인수(iSCSI/VM), 엄준호(VM), 조민지(VM)</li>
+                                        <li><b>담당자:</b> 서인수(iSCSI/VM), 엄준호(VM), 조민지(VM)</li>
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
@@ -413,11 +416,18 @@
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">웹 서버와 DNS 관리</h2>
-                                    <p class="item-intro text-muted">웹 서버 구축에 따른 DNS 관리</p>
-                                    <p class="item-content">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p class="item-intro text-muted">서버 개수 증가에 따른 DNS 관리</p>
+                                    <p class="item-content">앞서, ESXi 상에서 VM을 생성할 수 있다는 것을 확인했습니다. 팀원들은 각자가 맡은 업무를 수행하기 위해, VM 상에서 웹 서버를 구축하였습니다.
+                                        하지만, 서버의 개수가 늘어나면서, 팀원들이 <b>일일히 IP를 작성하여 각 서버에 접근하는 것이 불편해지기 시작</b>했습니다. 불편함을 해결하기 위해 임시로 사용할 도메인을 구매하고, 그 도메인을 통해 각 서버에 접속하려고 합니다.
+                                    </p>
+                                    <p class="item-content"><b>도메인에 서브 도메인을 붙여서 각 서버를 식별</b>했습니다. 예를 들어, 구매한 도메인이 <code>temprmn.shop</code>이고, 첫 번째 웹 서버에 접근하려고 합니다.
+                                        그러기 위해서 도메인에 <code>web1.</code>이라는 서브 도메인을 추가해서, <b><code>web1.temprmn.shop</code> 형식의 도메인을 통해 첫 번째 웹 서버에 접속할 수 있도록 <code>temprmn.shop.db</code> 파일을 작성</b>했습니다. </p>
+
+                                    <p class="item-content">모든 서버의 정보를 저장한 다음, name 데몬을 실행하고, dns 서비스를 방화벽에 추가합니다. 이제 이전보다 편리하게 각 서버에 접속할 수 있게 되었습니다.</p>
+                                    <p class="text-muted">(1: 웹 서버 관련 이미지, 2: DNS 관련된 이미지)</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/04-full.png" alt="" />
                                     <ul class="list-inline">
-                                        <li>담당자: 서인수(DNS), 엄준호(웹 서버 VM), 조민지(웹 서버 VM)</li>
+                                        <li><b>담당자:</b> 서인수(DNS VM), 엄준호(웹 서버 VM), 조민지(웹 서버 VM)</li>
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
@@ -442,10 +452,31 @@
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">내부 파일 공유 시스템 구축</h2>
                                     <p class="item-intro text-muted">NFS, Samba, Berryz Webshare, FTP를 활용해, 팀 내부에서 파일을 공유</p>
-                                    <p class="item-content">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p class="item-content">
+                                        원활하고 안전한 협업을 위해서, 팀 내 망에서만 사용할 파일 공유 시스템을 구축해보려고 합니다. 하지만, 저희는 CentOS(Linux)와 Windows 두 가지의 OS를 사용해 웹 서버를 구축했습니다.
+                                        파일 공유 시스템 중에서는 여러 종류의 OS를 지원하지 않는 경우가 있기 때문에, 상황에 맞는 파일 공유 시스템을 채택해야합니다.
+                                        모든 팀원들과 파일을 공유할 수 있는지 파악해보기 위해서, 다양한 파일 공유 시스템을 경험해보았습니다.
+                                    </p>
+                                    <p class="item-content">
+                                        <b>NFS</b>(Network File System)
+                                        <!--{{간단하게 개념 설명 후 → 어떻게 했다고 언급만}}-->
+                                    </p>
+                                    <p style="text-align: left;">(NFS 사진)</p>
+                                    <p class="item-content">
+                                        <b>Samba</b>
+                                    </p>
+                                    <p style="text-align: left;">(Samba 사진)</p>
+                                    <p class="item-content">
+                                        <b>Berryz Webshare</b>
+                                    </p>
+                                    <p style="text-align: left;">(Webshare 사진)</p>
+                                    <p class="item-content">
+                                        <b>FTP</b>(File Transfer Protocol)
+                                    </p>
+                                    <p style="text-align: left;">(FTP 사진)</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/05-full.png" alt="" />
                                     <ul class="list-inline">
-                                        <li>담당자: 엄준호(Samba, Berryz Webshare), 조민지(NFS, FTP)</li>
+                                        <li><b>담당자:</b> 엄준호(Samba, Berryz Webshare), 조민지(NFS, FTP)</li>
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
@@ -470,10 +501,29 @@
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">네트워크 모니터링</h2>
                                     <p class="item-intro text-muted">Cacti에서 네트워크를 모니터링</p>
-                                    <p class="item-content">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p class="item-content">
+                                        서버 실행에 문제는 없는지, 모니터링을 해보려고 합니다.
+                                        NMS(Network Monitoring System)는 컴퓨터 네트워크 또는 네크워크들을 모니터링하고 관리하는데 사용되며, 문제점들을 사후 조치하거나 관리까지 총괄합니다.
+                                        NMS의 기능들은 아래처럼 5가지로 분류할 수 있습니다.
+                                    </p>
+                                    <details>
+                                        <summary class="item-content"><b>NMS의 5대 기능(FCAPS)</b></summary>
+                                        <ul class="list-inline item-content">
+                                            <li></li>
+                                            <li>1. <b>결함 관리(<u>F</u>ault):</b> 결함을 탐지하고 사용자에게 알려 신속하게 결함을 해결하는 일</li>
+                                            <li>2. <b>구성 관리(<u>C</u>onfiguration):</b> 네트워크 통신망을 구성하고 있는 통신장비, 프로그램 등을 파악하여 관리하고 경우에 맞게 재구성하는 일</li>
+                                            <li>3. <b>회계 관리(<u>A</u>ccounting):</b> 사용자의 네트워크 자원의 사용 비용을 알려주고 측정하는 일</li>
+                                            <li>4. <b>성능 관리(<u>P</u>erformance):</b> 네트워크 운용에 관한 분석을 통하여 향후 수요 예측과 네트워크 운용의 최적화 등을 관리하는 일</li>
+                                            <li>5. <b>보안 관리(<u>S</u>ecurity):</b> 통신망과 통신장비에 대한 접근 제어와 보안 서비스 등을 관리하는 일</li>
+                                        </ul>
+                                    </details>
+                                    <p class="item-content">
+                                        저희 팀은 모니터링 시스템으로 상대적으로 인터페이스가 단순하고, 원하는 정보의 그래프만 배치하여 확인할 수 있는 <b>Cacti</b>를 채택했습니다.
+                                        아래는 Windows 서버를 모니터링 중인 사진입니다.
+                                    </p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/06-full.png" alt="" />
                                     <ul class="list-inline">
-                                        <li>담당자: 조민지</li>
+                                        <li><b>담당자:</b> 조민지</li>
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
@@ -501,7 +551,7 @@
                                     <p class="item-content">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/07-full.gif" alt="" />
                                     <ul class="list-inline">
-                                        <li>담당자: 최정은(로드밸런싱), 조민지(식권대장 웹 페이지)</li>
+                                        <li><b>담당자:</b> 최정은(로드밸런싱), 조민지(식권대장 웹 페이지)</li>
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
