@@ -30,7 +30,7 @@
                     <ul class="navbar-nav text-uppercase ml-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#summary">개요</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">프로젝트 상세</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">팀 소개</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">팀원 소개</a></li>
                         <!--
                             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#process">구현 프로세스</a></li>
                             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">연락처</a></li>
@@ -62,7 +62,7 @@
                         </span>
                         <h4 class="my-3">하이퍼바이저</h4>
                         <ul class="list-inline text-muted">
-                            <li>VMware WorkStation 17</li>
+                            <li>VMware Workstation 17</li>
                             <li>ESXi 6.7</li>
                         </ul>
                     </div>
@@ -82,18 +82,23 @@
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-solid fa-folder-open fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">파일 공유 시스템</h4>
-                        <p class="text-muted">SMB, NFS, FTP, Berryz WebShare</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-solid fa-database fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">데이터베이스</h4>
                         <p class="text-muted">MariaDB</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-solid fa-folder-open fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">파일 공유 시스템</h4>
+                        <ul class="list-inline text-muted">
+                            <li>Network File System</li>      
+                            <li>Samba</li>                     
+                            <li>Berryz Webshare</li>
+                            <li>File Transfer Protocol</li> 
+                        </ul>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
@@ -150,11 +155,11 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/02-thumbnail.jpg" alt="" />
+                                <img class="img-fluid" src="assets/img/portfolio/02-thumbnail.png" alt="" />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">라우터에서 Private IP 할당</div>
-                                <div class="portfolio-caption-subheading text-muted">Router에서 DHCP을 통해 각 기기에 Private IP 할당</div>
+                                <div class="portfolio-caption-heading">가상 라우터에서<br>Private IP 할당</div>
+                                <div class="portfolio-caption-subheading text-muted">vRouter에서 DHCP을 통해 각 기기에 Private IP 할당</div>
                             </div>
                         </div>
                     </div>
@@ -164,7 +169,7 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/03-thumbnail.jpg" alt="" />
+                                <img class="img-fluid" src="assets/img/portfolio/03-thumbnail.png" alt="" />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">ESXi 상에서<br>VM 및 iSCSI 구축</div>
@@ -172,13 +177,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/04-thumbnail.jpg" alt="" />
+                                <img class="img-fluid" src="assets/img/portfolio/04-thumbnail.png" alt="" />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">웹 서버와 DNS 관리</div>
@@ -186,31 +191,45 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                    <div class="col-lg-3 col-sm-6 mb-4 mb-sm-0">
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/05-thumbnail.jpg" alt="" />
+                                <img class="img-fluid" src="assets/img/portfolio/05-thumbnail.png" alt="" />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">내부 파일 공유 시스템 구축</div>
-                                <div class="portfolio-caption-subheading text-muted">SMB, NFS, FTP, Berryz Webshare</div>
+                                <div class="portfolio-caption-heading">내부 파일 공유 시스템</div>
+                                <div class="portfolio-caption-subheading text-muted">NFS, Samba, Berryz Webshare, FTP를 활용해, 팀 내부에서 파일을 공유</div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
+                    <div class="col-lg-3 col-sm-6">
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/06-thumbnail.jpg" alt="" />
+                                <img class="img-fluid" src="assets/img/portfolio/06-thumbnail.png" alt="" />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">모니터링과 로드밸런싱</div>
-                                <div class="portfolio-caption-subheading text-muted">Cacti에서 네트워크를 모니터링하고, HAProxy를 통해 로드밸런싱을 진행</div>
+                                <div class="portfolio-caption-heading">네트워크 모니터링</div>
+                                <div class="portfolio-caption-subheading text-muted">Cacti에서 네트워크를 모니터링</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal7">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/07-thumbnail.png" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">로드밸런싱</div>
+                                <div class="portfolio-caption-subheading text-muted">가상 라우터에서 HAProxy를 통해 로드밸런싱을 진행</div>
                             </div>
                         </div>
                     </div>
@@ -221,7 +240,7 @@
         <section class="page-section" id="team">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">팀 소개</h2>
+                    <h2 class="section-heading text-uppercase">팀원 소개</h2>
                     <h3 class="section-subheading text-muted">싹닥터(SAC-Doctor) 팀 멤버를 소개합니다</h3>
                 </div>
                 <div class="row">
@@ -229,7 +248,7 @@
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="assets/img/team/SIS.png" alt="" />
                             <h4>서인수</h4>
-                            <p class="text-muted">조장 / DNS DB, iSCSI 담당</p>
+                            <p class="text-muted">팀장 / DNS DB, iSCSI 담당</p>
                             <a class="btn btn-dark btn-social mx-2" href="mailto:ipxid90@outlook.com"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
@@ -237,7 +256,7 @@
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="assets/img/team/UJH.png" alt="" />
                             <h4>엄준호</h4>
-                            <p class="text-muted">웹 서버, SMB, Webshare 담당</p>
+                            <p class="text-muted">웹 서버, Samba, Berryz Webshare 담당</p>
                             <a class="btn btn-dark btn-social mx-2" href="mailto:vipowerx@nate.com"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
@@ -312,14 +331,9 @@
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">물리 스위치 연결</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <p class="item-intro text-muted">각 팀원들 PC에 실제로 물리 스위치를 연결하여 프로젝트 진행</p>
+                                    <p class="item-content">스위치로 연결된 기기들이 가상 라우터를 통해 IP를 분배받는 상황을 연출해보는 것이 저희 팀의 최우선 과제였습니다. 이를 위해 실제 물리 스위치와 각 팀원의 PC를 랜선으로 연결해주었습니다.</p>                                    
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/01-full.png" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>Date: January 2020</li>
-                                        <li>Client: Threads</li>
-                                        <li>Category: Illustration</li>
-                                    </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
                                         닫기
@@ -341,14 +355,13 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">라우터에서 Private IP 할당</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/02-full.jpg" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <h2 class="">가상 라우터에서 Private IP 할당</h2>
+                                    <p class="item-intro text-muted">vRouter에서 DHCP을 통해 각 기기에 Private IP 할당</p>
+                                    <p class="item-content">팀 내 망 구축을 위해 팀원들의 PC와 ESXi에 IP를 분배해야합니다. vRouter가 <b>물리 스위치로부터 받는 IP를 static으로 고정</b>하고, <b>랜카드에 대한 네트워크 설정을 마친 후,</b> <b>vRouter에서 DHCP 데몬을 설치 및 실행</b>하였습니다. </p>
+                                    <p class="item-content">물리 스위치 랜카드에 대한 네트워크 설정은 Private으로 해두어서 팀원들의 PC와 ESXi에는 Private IP가 할당되었습니다. ESXi는 물리 스위치의 랜카드를 연결했기 때문에 외부에서는 접근할 수 없고, 물리 스위치로 연결된 팀원의 PC만 접근할 수 있게 되었습니다.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/02-full.png" alt="" />
                                     <ul class="list-inline">
-                                        <li>Date: January 2020</li>
-                                        <li>Client: Explore</li>
-                                        <li>Category: Graphic Design</li>
+                                        <li>담당자: 최정은</li>
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
@@ -372,13 +385,11 @@
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">ESXi 상에서 VM 및 iSCSI 구축</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/03-full.jpg" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p class="item-intro text-muted">물리 스위치로 연결된 기기들은 ESXi 위에서 VM 생성 및 접근이 가능</p>
+                                    <p class="item-content">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/03-full.png" alt="" />
                                     <ul class="list-inline">
-                                        <li>Date: January 2020</li>
-                                        <li>Client: Finish</li>
-                                        <li>Category: Identity</li>
+                                        <li>담당자: 서인수(iSCSI/VM), 엄준호(VM), 조민지(VM)</li>
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
@@ -402,13 +413,11 @@
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">웹 서버와 DNS 관리</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/04-full.jpg" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p class="item-intro text-muted">웹 서버 구축에 따른 DNS 관리</p>
+                                    <p class="item-content">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/04-full.png" alt="" />
                                     <ul class="list-inline">
-                                        <li>Date: January 2020</li>
-                                        <li>Client: Lines</li>
-                                        <li>Category: Branding</li>
+                                        <li>담당자: 서인수(DNS), 엄준호(웹 서버 VM), 조민지(웹 서버 VM)</li>
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
@@ -432,13 +441,11 @@
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">내부 파일 공유 시스템 구축</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/05-full.jpg" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p class="item-intro text-muted">NFS, Samba, Berryz Webshare, FTP를 활용해, 팀 내부에서 파일을 공유</p>
+                                    <p class="item-content">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/05-full.png" alt="" />
                                     <ul class="list-inline">
-                                        <li>Date: January 2020</li>
-                                        <li>Client: Southwest</li>
-                                        <li>Category: Website Design</li>
+                                        <li>담당자: 엄준호(Samba, Berryz Webshare), 조민지(NFS, FTP)</li>
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
@@ -461,14 +468,40 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">모니터링과 로드밸런싱</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/06-full.jpg" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <h2 class="text-uppercase">네트워크 모니터링</h2>
+                                    <p class="item-intro text-muted">Cacti에서 네트워크를 모니터링</p>
+                                    <p class="item-content">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/06-full.png" alt="" />
                                     <ul class="list-inline">
-                                        <li>Date: January 2020</li>
-                                        <li>Client: Window</li>
-                                        <li>Category: Photography</li>
+                                        <li>담당자: 조민지</li>
+                                    </ul>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        닫기
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 7-->
+        <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">로드밸런싱</h2>
+                                    <p class="item-intro text-muted">가상 라우터에서 HAProxy를 통해 로드밸런싱을 진행</p>
+                                    <p class="item-content">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/07-full.gif" alt="" />
+                                    <ul class="list-inline">
+                                        <li>담당자: 최정은(로드밸런싱), 조민지(식권대장 웹 페이지)</li>
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
