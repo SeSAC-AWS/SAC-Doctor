@@ -92,9 +92,10 @@
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-solid fa-folder-open fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">파일 공유 시스템</h4>
+                        <h4 class="my-3">파일 공유 및 저장</h4>
                         <ul class="list-inline text-muted">
-                            <li>Network File System</li>      
+                            <li>iSCSI</li>
+                            <li>Network File System</li>  
                             <li>Samba</li>                     
                             <li>Berryz Webshare</li>
                             <li>File Transfer Protocol</li> 
@@ -243,7 +244,7 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">팀원 소개</h2>
-                    <h3 class="section-subheading text-muted">싹닥터(SAC-Doctor) 팀 멤버를 소개합니다</h3>
+                    <h3 class="section-subheading text-muted">싹닥터(SAC-Doctor) 팀원들을 소개합니다</h3>
                 </div>
                 <div class="row">
                     <div class="col-lg-6" style="width:50%;">
@@ -310,9 +311,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-4 text-lg-left">Copyright © SAC Doctor 2023</div>
                     <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://github.com/SeSAC-AWS/SAC-Doctor"><i class="fab fa-github"></i></a>
                     </div>
                     <div class="col-lg-4 text-lg-right">
                         <a class="mr-3" href="#!">개인정보 정책</a>
@@ -359,9 +358,13 @@
                                     <!-- Project Details Go Here-->
                                     <h2 class="">가상 라우터에서 Private IP 할당</h2>
                                     <p class="item-intro text-muted">vRouter에서 DHCP을 통해 각 기기에 Private IP 할당</p>
-                                    <p class="item-content">팀 내 망 구축을 위해 팀원들의 PC와 ESXi에 IP를 분배해야합니다. vRouter가 <b>물리 스위치로부터 받는 IP를 static으로 고정</b>하고, <b>랜카드에 대한 네트워크 설정을 마친 후,</b> <b>vRouter에서 DHCP 데몬을 설치 및 실행</b>하였습니다. </p>
-                                    <p class="item-content">물리 스위치 랜카드에 대한 네트워크 설정은 Private으로 해두어서 팀원들의 PC와 ESXi에는 Private IP가 할당되었습니다. ESXi는 물리 스위치의 랜카드를 연결했기 때문에 외부에서는 접근할 수 없고, 물리 스위치로 연결된 팀원의 PC만 접근할 수 있게 되었습니다.</p>
-                                    <p>(dhcp 관련 이미지 추가)</p>
+                                    <p class="item-content">
+                                        팀 내 망 구축을 위해 팀원들의 PC와 ESXi에 IP를 분배해야합니다. vRouter가 <b>물리 스위치로부터 받는 IP를 static으로 고정</b>하고, <b>랜카드에 대한 네트워크 설정을 마친 후,</b> <b>vRouter에서 DHCP 데몬을 설치 및 실행</b>하였습니다.
+                                    </p>
+                                    <p class="item-content">
+                                        물리 스위치 랜카드에 대한 네트워크 설정은 Private으로 해두어서 팀원들의 PC와 ESXi에는 Private IP가 할당되었습니다. ESXi는 물리 스위치의 랜카드를 연결했기 때문에 외부에서는 접근할 수 없고, 물리 스위치로 연결된 팀원의 PC만 접근할 수 있게 되었습니다.
+                                    </p>
+                                    <!-- (dhcp 관련 이미지 추가) -->
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/02-full.png" alt="" />
                                     <ul class="list-inline">
                                         <li><b>담당자:</b> 최정은</li>
@@ -395,13 +398,12 @@
                                         모든 팀원은 ESXi 상에 가상 머신(VM)을 생성할 수 있고, ESXi 상에 생성된 임의의 VM을 실행하고 종료할 수 있습니다.
                                     </p>
                                     <p class="item-content">
-                                        <!-- iSCSI 개념 설명 간략하게 설명 후 ->  논리 유닛 생성 및 마운트 -->
+                                        iSCSI는 TCP/IP 네트워크를 이용해 스토리지와 컴퓨터 간 블록 데이터 전송을 가능하게 해주는 네트워크 프로토콜 입니다.
+                                        상대적으로 단순하고 구축 비용이 낮다는 장점이 있습니다. 이 장점이 규모가 작은 저희 프로젝트에 적합하다고 판단해 도입하기로 결정했습니다.
                                     </p>
-                                    <p style="text-align: left;">(1: EXSi GUI에서 접속 중인 사진)</p>
-                                    <p class="item-content">
-                                        
-                                    </p>
-                                    <p style="text-align: left;">(2: iSCSI 관련 사진)</p>
+                                    <!-- (1: EXSi GUI에서 접속 중인 사진) -->
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/03-full.png" alt="" />
+                                    <!-- (2: iSCSI 관련 사진) -->
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/03-full.png" alt="" />
                                     <ul class="list-inline">
                                         <li><b>담당자:</b> 서인수(iSCSI/VM), 엄준호(VM), 조민지(VM)</li>
@@ -432,11 +434,14 @@
                                     <p class="item-content">앞서, ESXi 상에서 VM을 생성할 수 있다는 것을 확인했습니다. 팀원들은 각자가 맡은 업무를 수행하기 위해, VM 상에서 웹 서버를 구축하였습니다.
                                         하지만, 서버의 개수가 늘어나면서, 팀원들이 <b>일일히 IP를 작성하여 각 서버에 접근하는 것이 불편해지기 시작</b>했습니다. 불편함을 해결하기 위해 임시로 사용할 도메인을 구매하고, 그 도메인을 통해 각 서버에 접속하려고 합니다.
                                     </p>
-                                    <p class="item-content"><b>도메인에 서브 도메인을 붙여서 각 서버를 식별</b>했습니다. 예를 들어, 구매한 도메인이 <code>temprmn.shop</code>이고, 첫 번째 웹 서버에 접근하려고 합니다.
-                                        그러기 위해서 도메인에 <code>web1.</code>이라는 서브 도메인을 추가해서, <b><code>web1.temprmn.shop</code> 형식의 도메인을 통해 첫 번째 웹 서버에 접속할 수 있도록 <code>temprmn.shop.db</code> 파일을 작성</b>했습니다. </p>
-
-                                    <p class="item-content">모든 서버의 정보를 저장한 다음, name 데몬을 실행하고, dns 서비스를 방화벽에 추가합니다. 이제 이전보다 편리하게 각 서버에 접속할 수 있게 되었습니다.</p>
-                                    <p class="text-muted">(1: 웹 서버 관련 이미지, 2: DNS 관련된 이미지)</p>
+                                    <p class="item-content">
+                                        <b>도메인에 서브 도메인을 붙여서 각 서버를 식별</b>했습니다. 예를 들어, 구매한 도메인이 <code>temprmn.shop</code>이고, 첫 번째 웹 서버에 접근하려고 합니다.
+                                        그러기 위해서 도메인에 <code>web1.</code>이라는 서브 도메인을 추가해서, <b><code>web1.temprmn.shop</code> 형식의 도메인을 통해 첫 번째 웹 서버에 접속할 수 있도록 <code>temprmn.shop.db</code> 파일을 작성</b>했습니다.
+                                    </p>
+                                    <p class="item-content">
+                                        모든 서버의 정보를 저장한 다음, name 데몬을 실행하고, dns 서비스를 방화벽에 추가합니다. 이제 이전보다 편리하게 각 서버에 접속할 수 있게 되었습니다.
+                                    </p>
+                                    <!-- (1: 웹 서버 관련 이미지, 2: DNS 관련된 이미지) -->
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/04-full.png" alt="" />
                                     <ul class="list-inline">
                                         <li><b>담당자:</b> 서인수(DNS VM), 엄준호(웹 서버 VM), 조민지(웹 서버 VM)</li>
@@ -469,23 +474,7 @@
                                         파일 공유 시스템 중에서는 여러 종류의 OS를 지원하지 않는 경우가 있기 때문에, 상황에 맞는 파일 공유 시스템을 채택해야합니다.
                                         모든 팀원들과 파일을 공유할 수 있는지 파악해보기 위해서, 다양한 파일 공유 시스템을 경험해보았습니다.
                                     </p>
-                                    <p class="item-content">
-                                        <b>NFS</b>(Network File System)
-                                        <!--{{간단하게 개념 설명 후 → 어떻게 했다고 언급만}}-->
-                                    </p>
-                                    <p style="text-align: left;">(NFS 사진)</p>
-                                    <p class="item-content">
-                                        <b>Samba</b>
-                                    </p>
-                                    <p style="text-align: left;">(Samba 사진)</p>
-                                    <p class="item-content">
-                                        <b>Berryz Webshare</b>
-                                    </p>
-                                    <p style="text-align: left;">(Webshare 사진)</p>
-                                    <p class="item-content">
-                                        <b>FTP</b>(File Transfer Protocol)
-                                    </p>
-                                    <p style="text-align: left;">(FTP 사진)</p>
+                                    <!-- NF, Samba, Webshare, FTP 사진 -->
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/05-full.png" alt="" />
                                     <ul class="list-inline">
                                         <li><b>담당자:</b> 엄준호(Samba, Berryz Webshare), 조민지(NFS, FTP)</li>
@@ -561,7 +550,6 @@
                                     <h2 class="text-uppercase">로드밸런싱</h2>
                                     <p class="item-intro text-muted">가상 라우터에서 HAProxy를 통해 로드밸런싱을 진행</p>
                                     <p class="item-content">
-                                        <!-- 1. 개요 -> 2. 과정 -> 3. 결과 -->
                                         팀원이 디자인한 웹 페이지를 배포하려고 합니다. 하지만, 한 개의 서버만을 사용하여 배포하면, 서버가 다운되면 복구 시까지 웹 페이지를 서비스 할 수 없게 됩니다.
                                         그래서 여러 개의 서버에 웹 페이지를 설치하고, 로드밸런싱을 통해 서비스의 고 가용성을 보장해주려고 합니다.
                                     </p>
